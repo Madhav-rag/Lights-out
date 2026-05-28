@@ -1,7 +1,4 @@
-/* ==========================================
-   LIGHTS OUT — F1 Day & Night Experience
-   style.css
-   ========================================== */
+
 :root {
   --day-bg: #e8e0d0;
   --day-bg2: #f5f0e8;
@@ -66,9 +63,7 @@ body {
   overflow-x: hidden;
   transition: background var(--transition), color var(--transition);
 }
-/* ==========================================
-   INTRO OVERLAY
-   ========================================== */
+
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -118,9 +113,7 @@ body {
   letter-spacing: 0.3em;
   transition: color 0.5s;
 }
-/* ==========================================
-   NAVBAR
-   ========================================== */
+
 #navbar {
   position: fixed;
   top: 16px;
@@ -311,9 +304,7 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
-/* ==========================================
-   SECTIONS BASE
-   ========================================== */
+
 .section {
   min-height: 100vh;
   position: relative;
@@ -355,9 +346,7 @@ body {
   margin-bottom: 56px;
   transition: color var(--transition);
 }
-/* ==========================================
-   REVEAL ANIMATIONS
-   ========================================== */
+
 .reveal-up {
   opacity: 0;
   transform: translateY(30px);
@@ -368,9 +357,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-/* ==========================================
-   HERO SECTION
-   ========================================== */
+
 #hero {
   background: linear-gradient(160deg, var(--day-sky1) 0%, var(--day-sky2) 50%, var(--day-bg) 100%);
   transition: background var(--transition);
@@ -575,9 +562,7 @@ body {
 [data-theme="night"] .hud-val {
   color: var(--night-neon3);
 }
-/* ==========================================
-   PADDOCK SECTION
-   ========================================== */
+
 #paddock {
   background: var(--bg2);
   transition: background var(--transition);
@@ -737,9 +722,7 @@ body {
   background: var(--border);
   transition: background var(--transition);
 }
-/* ==========================================
-   SUNSET TRANSITION SECTION
-   ========================================== */
+
 .section-sunset {
   background: linear-gradient(160deg, var(--day-bg2) 0%, #e8c080 40%, #c87040 70%, #402030 100%);
   transition: background var(--transition);
@@ -854,9 +837,7 @@ body {
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.4);
 }
-/* ==========================================
-   NIGHT RACE SECTION
-   ========================================== */
+
 .section-night {
   background: var(--night-bg);
   color: var(--night-text);
@@ -997,9 +978,7 @@ body {
   opacity: 0.5;
   text-transform: uppercase;
 }
-/* ==========================================
-   FINISH SECTION
-   ========================================== */
+
 .section-finish {
   background: var(--night-bg);
   color: var(--night-text);
@@ -1115,15 +1094,11 @@ body {
 .credits-divider {
   color: rgba(255,255,255,0.15);
 }
-/* ==========================================
-   SCROLL-DRIVEN THEME TRANSITION
-   ========================================== */
+
 body.transitioning-night #paddock {
   background: color-mix(in srgb, var(--day-bg2), var(--night-bg2) var(--night-mix, 0%));
 }
-/* ==========================================
-   UTILITY / KEYFRAMES
-   ========================================== */
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1132,9 +1107,7 @@ body.transitioning-night #paddock {
   0%, 100% { box-shadow: 0 0 20px rgba(255,53,72,0.3); }
   50% { box-shadow: 0 0 40px rgba(255,53,72,0.7), 0 0 80px rgba(255,53,72,0.3); }
 }
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
+
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-right {
