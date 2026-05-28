@@ -1164,3 +1164,28 @@ body.transitioning-night #paddock {
     grid-template-columns: 1fr;
   }
 }
+
+.f1-car-flyby {
+  position: fixed;
+  left: -160px;
+  width: 120px;
+  z-index: 9998;
+  pointer-events: none;
+  animation: carFlyby 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  filter: drop-shadow(0 0 8px rgba(255, 53, 72, 0.8));
+}
+
+.car-trail {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 53, 72, 0.6));
+}
+
+@keyframes carFlyby {
+  0%   { left: -160px; }
+  100% { left: 110%; }
+}

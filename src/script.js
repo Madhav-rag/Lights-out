@@ -241,18 +241,40 @@ function playEngineSound() {
 
 
     pulseGlow();
+    launchCarAnimation();
   } catch (e) {
     console.log('Audio not available:', e);
   }
 }
 
 function pulseGlow() {
-  const hero = document.getElementById('hero');
-  hero.style.transition = 'box-shadow 0.1s';
-  hero.style.boxShadow = `inset 0 0 80px rgba(200, 49, 42, 0.25)`;
-  setTimeout(() => {
-    hero.style.boxShadow = '';
-  }, 600);
+const hero = document.getElementById('hero');
+hero.style.transition = 'box-shadow 0.1s';
+hero.style.boxShadow = `inset 0 0 80px rgba(200, 49, 42, 0.25)`;
+setTimeout(() => { hero.style.boxShadow = ''; }, 600);
+}
+
+function launchCarAnimation() {
+const car = document.createElement('div');
+car.className = 'f1-car-flyby';
+car.style.top = `${25 + Math.random() * 50}%`;
+car.innerHTML = `
+  <svg viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="14" width="90" height="10" rx="5" fill="#cc1a1a"/>
+    <rect x="20" y="10" width="50" height="8" rx="4" fill="#e02020"/>
+    <rect x="30" y="6" width="30" height="6" rx="3" fill="#cc1a1a"/>
+    <rect x="55" y="4" width="18" height="4" rx="2" fill="#aaa"/>
+    <circle cx="18" cy="26" r="6" fill="#222" stroke="#555" stroke-width="1.5"/>
+    <circle cx="18" cy="26" r="3" fill="#444"/>
+    <circle cx="82" cy="26" r="6" fill="#222" stroke="#555" stroke-width="1.5"/>
+    <circle cx="82" cy="26" r="3" fill="#444"/>
+    <rect x="92" y="17" width="18" height="4" rx="2" fill="#cc1a1a"/>
+    <rect x="0" y="17" width="6" height="4" rx="2" fill="#ff4444"/>
+  </svg>
+  <div class="car-trail"></div>
+`;
+document.body.appendChild(car);
+setTimeout(() => car.remove(), 1800);
 }
 
 document.querySelectorAll('.night-card').forEach(card => {
