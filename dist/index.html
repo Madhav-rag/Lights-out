@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIGHTS OUT — F1 Day & Night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/your-repo-name/assets/index-C7Yk2snw.js"></script>
+  <link rel="stylesheet" crossorigin href="/your-repo-name/assets/index-DJyZHoeM.css">
+</head>
+<body>
+
+  
+  <div id="intro-overlay">
+    <div class="intro-brand">FORMULA · ONE</div>
+    <div class="lights-container">
+      <div class="light" id="l1"></div>
+      <div class="light" id="l2"></div>
+      <div class="light" id="l3"></div>
+      <div class="light" id="l4"></div>
+      <div class="light" id="l5"></div>
+    </div>
+    <div class="intro-hint">LIGHTS OUT</div>
+  </div>
+
+  
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">LIGHTS OUT</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#paddock" class="nav-link">Paddock</a></li>
+        <li><a href="#sunset" class="nav-link">Transition</a></li>
+        <li><a href="#night-race" class="nav-link">Night Race</a></li>
+        <li><a href="#finish" class="nav-link">Finish Line</a></li>
+      </ul>
+
+      <div class="nav-right">
+        
+        <div class="hud-clock">
+          <span class="clock-label">SYD</span>
+          <span id="live-clock">00:00:00</span>
+        </div>
+
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon sun">☀</span>
+          <span class="toggle-icon moon">◑</span>
+        </button>
+
+        
+        <div class="nav-profile">
+          <div class="profile-avatar">M</div>
+          <div class="profile-info">
+            <span class="profile-name">Madhav</span>
+            <span class="profile-status">
+              <span class="status-dot"></span>Online
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section id="hero" class="section">
+    <div class="hero-bg">
+      <div class="hero-streaks">
+        <div class="streak" style="--delay:0s;--y:20%"></div>
+        <div class="streak" style="--delay:0.4s;--y:45%"></div>
+        <div class="streak" style="--delay:0.9s;--y:65%"></div>
+        <div class="streak" style="--delay:1.4s;--y:80%"></div>
+      </div>
+      <div class="hero-sky-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up" style="--d:0.1s">FORMULA ONE · EXPERIENCE</div>
+      <h1 class="hero-title reveal-up" style="--d:0.2s">LIGHTS<br>OUT</h1>
+      <p class="hero-sub reveal-up" style="--d:0.4s">From Monaco sunlight to neon nights<br>at 300 km/h.</p>
+
+      <div class="hero-actions reveal-up" style="--d:0.6s">
+        <a href="#paddock" class="btn-primary">Enter the Paddock</a>
+        <button class="btn-engine" id="engineBtn">
+          <span class="engine-icon">▶</span> Start Engine
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>Scroll to race</span>
+    </div>
+
+    
+    <div class="corner-hud">
+      <div class="hud-row"><span class="hud-key">CIRCUIT</span><span class="hud-val">MONACO</span></div>
+      <div class="hud-row"><span class="hud-key">LAP</span><span class="hud-val">01 / 78</span></div>
+      <div class="hud-row"><span class="hud-key">CONDITION</span><span class="hud-val" id="hud-condition">DAY · DRY</span></div>
+    </div>
+  </section>
+
+  
+  <section id="paddock" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal-up" style="--d:0s">SECTOR 01 · PADDOCK</div>
+      <h2 class="section-title reveal-up" style="--d:0.1s">Monaco<br>Preparation</h2>
+      <p class="section-sub reveal-up" style="--d:0.2s">Race day begins before the sun peaks. Precision, luxury, and calm before the storm.</p>
+
+      <div class="telemetry-bar reveal-up" style="--d:0.3s">
+        <div class="telem-item">
+          <span class="telem-label">TIRE TEMP</span>
+          <div class="telem-bar-wrap">
+            <div class="telem-fill" style="--pct:82%;--color:#e8b84b" data-to="82"></div>
+          </div>
+          <span class="telem-val">82°C</span>
+        </div>
+        <div class="telem-item">
+          <span class="telem-label">FUEL LOAD</span>
+          <div class="telem-bar-wrap">
+            <div class="telem-fill" style="--pct:95%;--color:#4be8a0" data-to="95"></div>
+          </div>
+          <span class="telem-val">95%</span>
+        </div>
+        <div class="telem-item">
+          <span class="telem-label">ENGINE</span>
+          <div class="telem-bar-wrap">
+            <div class="telem-fill" style="--pct:100%;--color:#4ba8e8" data-to="100"></div>
+          </div>
+          <span class="telem-val">READY</span>
+        </div>
+      </div>
+
+      <div class="paddock-cards">
+        <div class="paddock-card reveal-up" style="--d:0.35s">
+          <div class="card-number">01</div>
+          <div class="card-body">
+            <h3>Track Walk</h3>
+            <p>Engineers study every apex, kerb, and straight. Monaco demands perfection.</p>
+          </div>
+          <div class="card-tag">07:30 LOCAL</div>
+        </div>
+        <div class="paddock-card reveal-up" style="--d:0.45s">
+          <div class="card-number">02</div>
+          <div class="card-body">
+            <h3>Setup Lock</h3>
+            <p>Final suspension adjustments. Softest settings, highest downforce package.</p>
+          </div>
+          <div class="card-tag">09:15 LOCAL</div>
+        </div>
+        <div class="paddock-card reveal-up" style="--d:0.55s">
+          <div class="card-number">03</div>
+          <div class="card-body">
+            <h3>Driver In</h3>
+            <p>Helmet on. HANS device locked. The crowd begins to breathe differently.</p>
+          </div>
+          <div class="card-tag">13:50 LOCAL</div>
+        </div>
+      </div>
+
+      
+      <div class="stat-strip reveal-up" style="--d:0.65s">
+        <div class="stat">
+          <span class="stat-num" data-count="78">0</span>
+          <span class="stat-label">Laps</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="260">0</span>
+          <span class="stat-label">km/h Top Speed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="19">0</span>
+          <span class="stat-label">Corners</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="1929">0</span>
+          <span class="stat-label">Since</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="sunset" class="section section-sunset">
+    <div class="sunset-bg"></div>
+    <div class="sunset-horizon"></div>
+
+    <div class="section-inner sunset-inner">
+      <div class="section-label reveal-up" style="--d:0s">SECTOR 02 · GOLDEN HOUR</div>
+      <h2 class="section-title sunset-title reveal-up" style="--d:0.15s">The Sun<br>Descends</h2>
+      <p class="section-sub reveal-up" style="--d:0.3s">Between day and night, the circuit transforms.<br>Floodlights warm up. The air cools. The race changes.</p>
+
+      <div class="transition-timeline reveal-up" style="--d:0.45s">
+        <div class="timeline-track">
+          <div class="timeline-step active">
+            <div class="step-dot"></div>
+            <span class="step-label">Daylight</span>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <span class="step-label">Golden Hour</span>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <span class="step-label">Lights On</span>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <span class="step-label">Night Race</span>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="sunset-quote reveal-up" style="--d:0.6s">
+        "The circuit looks entirely different under floodlights.<br>Every surface glows. Every shadow deepens."
+        <cite>— Race Engineer, Singapore GP</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  
+  <section id="night-race" class="section section-night">
+    <div class="night-bg">
+      <div class="city-glow"></div>
+      <div class="night-streaks">
+        <div class="nstreak" style="--d:0s;--y:15%;--spd:1.8s"></div>
+        <div class="nstreak" style="--d:0.5s;--y:40%;--spd:2.2s"></div>
+        <div class="nstreak" style="--d:1s;--y:60%;--spd:1.5s"></div>
+        <div class="nstreak" style="--d:1.7s;--y:80%;--spd:2s"></div>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="section-label night-label reveal-up" style="--d:0s">SECTOR 03 · NIGHT RACE</div>
+      <h2 class="section-title night-title reveal-up" style="--d:0.15s">Neon<br>Circuit</h2>
+      <p class="section-sub night-sub reveal-up" style="--d:0.3s">Singapore. Saudi Arabia. The world's most spectacular night races.</p>
+
+      <div class="night-cards">
+        <div class="night-card reveal-up" style="--d:0.35s" data-accent="#ff3548">
+          <div class="night-card-glow"></div>
+          <div class="night-card-inner">
+            <div class="nc-icon">🇸🇬</div>
+            <h3>Marina Bay</h3>
+            <p>Street circuit under the city skyline. 5067 metres of pure theatre.</p>
+            <div class="nc-stat">23 CORNERS · 5.067 KM</div>
+          </div>
+        </div>
+        <div class="night-card reveal-up" style="--d:0.45s" data-accent="#7b3fff">
+          <div class="night-card-glow"></div>
+          <div class="night-card-inner">
+            <div class="nc-icon">🇸🇦</div>
+            <h3>Jeddah Corniche</h3>
+            <p>Fastest street circuit on the calendar. Walls blur at 250+ km/h.</p>
+            <div class="nc-stat">27 CORNERS · 6.174 KM</div>
+          </div>
+        </div>
+        <div class="night-card reveal-up" style="--d:0.55s" data-accent="#00c8ff">
+          <div class="night-card-glow"></div>
+          <div class="night-card-inner">
+            <div class="nc-icon">🌃</div>
+            <h3>Las Vegas Strip</h3>
+            <p>Neon, speed, and spectacle. F1 meets the city that never sleeps.</p>
+            <div class="nc-stat">17 CORNERS · 6.201 KM</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="racing-line-wrap reveal-up" style="--d:0.7s">
+        <svg class="racing-line-svg" viewBox="0 0 800 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path class="race-path" d="M0,40 C100,10 150,70 250,40 C350,10 400,60 500,35 C600,10 650,65 800,40" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="racing-line-label">RACING LINE · MARINA BAY S1</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="finish" class="section section-finish">
+    <div class="finish-bg">
+      <div class="stars-field"></div>
+      <div class="city-lights-bg"></div>
+    </div>
+
+    <div class="section-inner finish-inner">
+      <div class="checkered-bar reveal-up" style="--d:0s"></div>
+
+      <div class="section-label finish-label reveal-up" style="--d:0.1s">SECTOR 04 · FINISH LINE</div>
+      <h2 class="section-title finish-title reveal-up" style="--d:0.2s">Some races<br>begin after<br>sunset.</h2>
+
+      <p class="section-sub finish-sub reveal-up" style="--d:0.35s">The night circuit isn't just a race.<br>It's where legends are made under the lights.</p>
+
+      <a href="#hero" class="btn-finish reveal-up" style="--d:0.5s">
+        <span>Back to Start</span>
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <div class="finish-credits reveal-up" style="--d:0.7s">
+        <span>Crafted by</span> <strong>Madhav</strong>
+        <span class="credits-divider">·</span>
+        <span>Frontend Development</span>
+        <span class="credits-divider">·</span>
+        <span>2025</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
