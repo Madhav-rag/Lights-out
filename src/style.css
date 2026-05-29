@@ -428,10 +428,7 @@ body {
   transition: color var(--transition);
 }
 [data-theme="night"] .hero-title {
-  background: linear-gradient(135deg, #f0f0f0 0%, var(--night-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+   color: #ffffff;
 }
 .hero-sub {
   font-size: 1.05rem;
