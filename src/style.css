@@ -1189,3 +1189,23 @@ body.transitioning-night #paddock {
   0%   { left: -160px; }
   100% { left: 110%; }
 }
+
+.btn-accept {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.4);
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 40px;
+}
+
+.btn-accept:hover {
+  border-color: var(--night-neon3);
+  color: var(--night-neon3);
+  box-shadow: 0 0 20px rgba(0,200,255,0.15);
+}
