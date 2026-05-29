@@ -71,8 +71,8 @@ function startClock() {
 }
 
 function restoreTheme() {
-  const saved = localStorage.getItem('lights-out-theme');
-  if (saved === 'night') setNightMode(true, false);
+  localStorage.removeItem('lights-out-manual');
+  setNightMode(false, false);
 }
 
 function setNightMode(enabled, animate = true) {
